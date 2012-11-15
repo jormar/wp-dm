@@ -1,0 +1,766 @@
+/*
+Theme Name: Synergy Global Business template
+Theme URI:
+Author: Synergy GB
+Author: Jormar Arellano
+Author: Manuel Perez
+Author URI: http://www.syngbiz.com/
+Description: Tema exclusivo de Synergy, desarrollado a la medida. Programadores: Jormar Arellano, Manuel Perez.
+Version: 1.0
+Tags:
+*/
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+body {
+	background: #fff;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* =Generales Wordpress
+----------------------------------------------- */
+.clear {
+    clear: both;
+}
+.alignleft {
+    float: left;
+    margin: 0 15px 15px 0;
+}
+.alignright {
+    float: right;
+    margin: 0 0 15px 15px;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+/*Estilos generales
+--------------------------------------*/
+body
+{
+    width: 1100px;
+    margin: 0 auto;
+    font-family: arial;
+}
+
+header
+{
+    height: 334px;
+    width: 100%;
+    background-color: white;
+}
+
+/* Estilos para el Home
+-----------------------------------*/
+
+/* Estilos para el header
+--------------------------------------*/
+
+.publicity_banner
+{
+    width: 340px;
+    height: 136px;
+    background-color: #e3f0f9;
+    float: right;
+    margin: 20px 10px 0 0;
+}
+
+.logo_img
+{
+    margin: 20px 0 0 10px;
+    width: 354px;
+    height: 142px;
+    background-image: url('../images/logo-durmiendomejor.png');
+    float: left;
+    position: relative;
+    z-index: 10;
+}
+
+.navigation_list_container
+{
+    width: 100%;
+    height: 144px;
+    background-image: url('../images/nube-botonera.png'); 
+    position: relative;
+    z-index: 10;
+    margin-top: 30px;   
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.navigation_list_container ul
+{
+    width: 740px;    
+}
+
+.navigation_list_container ul li
+{
+    float: left;
+    margin: 0 0 0 44px;
+    font-size: 14px;
+    
+}
+
+.navigation_list_container ul li a
+{
+    text-decoration: none;
+    color: #8b8c8e;
+    height: 144px;
+    line-height: 144px;
+    font-weight: bold;
+}
+.navigation_list_container ul li a.active
+{
+    color: #00325f;
+}
+
+.search_img
+{
+    margin:45px 0 0 22px;
+    float: left;
+}
+
+.search_input
+{
+    width: 255px;
+    height: 30px;
+    background-color: #e1e3e2;
+    float: left;
+    margin: 52px 0 0 10px;       
+}
+.social_network_container
+{
+    width: 100px;
+    height: 30px;
+    float: right;
+    position: relative;
+    top: -70px;
+    right: 20px;
+}
+.social_network_container img
+{
+    float: left;
+    margin-right: 5px;
+}
+
+
+/*Estilos para el content
+--------------------------------*/
+
+.content
+{
+    width: 100%;
+    /*height: 1520px;*/
+    /*background-image: url('../images/fondo-nubes.jpg');*/
+    background-color: #b1daf8;
+    background-size: 100% 110%;
+    background-position: 0 -122px;
+    margin-top: -46px;
+    padding-bottom: 60px;
+}
+
+div.content img.background_cloud
+{
+    position: relative;
+    top: -200px;
+}
+
+.main_container
+{
+    width: 716px;
+   /* float: left;*/
+   position: relative;
+   top: -39px;
+   margin-top: -152px;
+   z-index: 10;
+}
+
+.white_cloud_container
+{
+    width: 100%;
+    height: 150px;
+    position: relative;
+    z-index: 5;
+    background-image: url('../images/nube-blanca.png');
+    float: left;
+    margin-top: 50px;
+    background-position: 0 -212px;
+}
+
+#top_scroller
+{
+    float: left;
+    width: 682px;
+    height: 483px;
+    margin-left: 24px;
+    background-image: url('../images/nube-post-principal.png');
+    position: relative;
+    z-index: 50;
+    
+}
+
+#top_scroller p.cycle_text
+{
+    color: white;
+    text-align: justify; 
+    font-size: 15px;
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 15px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+#slideshow
+{
+    margin: 0 auto;
+    margin-top: 10px;    
+}
+
+#nav
+{
+    position: relative;
+    top: 138px;
+    float: right;
+    left: -10px;
+    margin-top: -30px;
+}
+
+#nav a
+{
+	width:19px;
+	height:19px;
+	margin-left:7px;
+	display:inline-block;
+	background-image:url("../images/circulo-azul-oscuro-post.png");
+	background-repeat: no-repeat;
+	margin-right:7px;
+	text-align:center;
+	text-decoration:none;
+	color:#163d6c;
+	
+}
+
+#nav a.activeSlide
+{
+	background-image: url("../images/circulo-azul-claro-postactivo.png");
+	background-repeat: no-repeat;
+	color:#558ea3;
+}	
+
+.cycle_title_container
+{
+    width: 100%;
+    height: 64px;
+    text-align: center;
+}
+
+.cycle_title 
+{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 64px;
+    line-height: 64px;
+}
+
+div.recent_news
+{
+    float: left;
+    width: 708px;
+    margin-top: 10px;
+}
+
+div.main_content_new
+{
+    width: 332px;
+    height: 332px;
+    background-color: white;
+    float: left;
+    margin-left: 22px;
+    margin-bottom: 15px;
+}
+
+div.main_content_new div.main_new_title
+{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+div.main_content_new div.main_new_title h1.main_new_title
+{
+    color: #1e3d59;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+div.main_content_new img
+{
+   width: 100%;
+   height: 168px;
+   margin-top: -52px;
+}
+
+div.main_content_new p
+{
+    color: #214275;
+    text-align: justify;
+    width: 90%;
+    margin: 0 5% 0 5%;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+div.main_content_new a
+{
+    color: #214275;
+    float: right;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+div.next_btn_container
+{
+    width:684px;
+    height: 55px;
+    float: left;
+    margin-left: 24px;
+    margin-top: 40px;
+}
+
+div.next_btn_container a
+{
+    float: right;
+    font-size: 16px;
+    text-decoration: none;
+    color: #1e406d;
+    font-weight: bold;
+    height: 55px;
+    line-height: 55px;
+    padding-right: 60px;
+    background-image: url('../images/flecha-azul.png');
+    background-repeat: no-repeat;
+    background-position: 115px;
+}
+
+.pico_container
+{
+    width: 0px;
+    height: 0px;
+    float: right;
+    position: relative;
+    z-index: 10;
+    border-width: 26px;
+    border-style: solid;
+    border-color: transparent;
+    
+}
+
+div.light_green_border
+{
+    border-top-color: #dce9a1;
+}
+
+div.light_blue_border
+{
+    border-top-color: #8bbde0;
+}
+
+div.salmon_border
+{
+    border-top-color: #e9c295;
+}
+
+div.green_border
+{
+    border-top-color: #c1e2a9;
+}
+
+/*Estilos para el aside
+------------------------------------------*/
+aside.home_aside
+{
+    width: 392px;
+    height: 1272px;
+    float: right;
+    position: relative;
+    margin-top: -1192px;
+}
+
+.last_tweet_container
+{
+    width: 356px;
+    height: 198px;
+    margin: 0 auto;
+    background-image: url('../images/nubetweets.png');
+    background-repeat: no-repeat;
+}
+
+aside div.news
+{
+    width: 356px;
+    margin: 0 auto;
+    height: 1040px;
+    background-color: #173d6c;
+    margin-top: 10px;
+    text-align: center;
+}
+
+aside div.news h1.aside_title
+{
+    color: white;
+    padding-top: 10px;
+}
+
+aside div.news div.aside_new
+{
+    width: 346px;
+    margin: 0 auto;
+    margin-top: 15px;
+    height: 312px;
+}
+
+aside div.news div.aside_new div.aside_new_title
+{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+aside div.news div.aside_new div.aside_new_title h1
+{
+    color: white;
+    height: 50px;
+    line-height: 50px;
+}
+
+aside div.news div.aside_new img
+{
+    width: 100%;
+    height: 126px;
+    margin-top: 10px;
+}
+
+aside div.news div.aside_new div.new_content
+{
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+}
+
+aside div.news div.aside_new div.new_content p
+{
+    color: white;
+    text-align: justify;
+    line-height: 18px;
+    font-size: 13px;
+}
+
+aside div.news div.aside_new a.keep_reading
+{
+    color: #8fbfe5;
+    float: left;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Estilos para el footer
+-------------------------------------------*/
+footer.page_footer
+{
+    width: 100%;
+    /*height: 342px;*/
+    margin-top: -26px;
+    float: left;
+}
+
+footer.page_footer img
+{
+    
+    float: left;
+}
+footer.page_footer div.footer_info_container
+{
+    width: 100%;
+    background-color: #85c3dc;
+    float: left;
+    text-align: center;
+    padding: 30px 0 40px 0;
+}
+footer.page_footer div.footer_info_container ul
+{
+    float: left;
+    width: 32%;
+}
+footer.page_footer div.footer_info_container ul li a
+{
+    color: white;
+    text-decoration: none;
+}
+footer.page_footer div.footer_info_container ul li a:hover
+{
+    text-decoration: underline;
+}
+footer.page_footer div.footer_info_container ul li
+{
+    margin-bottom: 5px;
+}
+footer.page_footer div.diarius_container
+{
+    float: left;
+    background-color: #85c3dc;
+    text-align: center;
+    width: 100%;
+}
+footer.page_footer div.diarius_container img
+{
+    float: none;
+    margin: 10px;
+}
+
+footer.page_footer div.diarius_container div.logo_link_container
+{
+    width: 250px;
+    margin: 0 auto;
+}
+footer.page_footer div.diarius_container div.logo_link_container a
+{
+    color: #0c4362;
+    text-decoration: none;
+}
+/* Colores para los titulos de los post
+-----------------------------------------------*/
+.pink
+{
+    background-color: #e8adc9;
+}
+
+.light_blue
+{
+    background-color: #8bbde0;
+}
+
+.light_green
+{
+    background-color: #dce9a1;
+}
+
+.salmon
+{
+    background-color: #e9c295;
+}
+
+.green
+{
+    background-color: #c1e2a9;
+}
+
+.cloud_blue
+{
+    background-color: #85c3dc;
+}
+
+.dark_blue
+{
+     background-color: #173d6c;
+}
+
+/*Estilos para el blog
+-----------------------------------------------*/
+
+div.recent_news
+{
+    float: left;
+    width: 100%;
+    
+}
+div.recent_news_blog
+{
+    margin-top: -86px;
+}
+
+
+div.next_btn_container_blog
+{
+    width:94%;
+    
+}
+
+.content_blog
+{
+    height: 1430px;
+}
+
+.page_footer_blog
+{
+    margin-top: -100px !important; 
+}
+
+/* Estilos para la pantalla de article
+-------------------------------------------------------------*/
+div.article
+{
+    height: 1000px;
+    background-color: white;
+    width: 682px;
+    margin: 0 auto;
+    float: left;
+    margin-left: 24px;
+}
+
+div img.article_img
+{
+    width: 640px;
+    height: 250px;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+div.article p.article_text
+{
+    width: 640px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-top: 10px;
+    color: #1a3b5e;
+    line-height: 17px;
+    font-size: 14px;
+}
+
+div.bottom_news_container
+{
+    width: 90%;
+    float: left;
+}
+
+aside.article
+{
+    margin-top: 0px;
+    height: 682px;
+}
+
+.clear
+{
+    width: 100%;
+    height: 0px;
+}
+
+/*Estilos para la pagina de contacto
+------------------------------------------------------------*/
+div.small_logo_container
+{
+    width: 308px;
+    height: 126px;
+    background-image: url('../images/logo-durmiendomejor.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 44px;
+    margin-left: 56px;
+}
+
+div.contact_info
+{
+    margin: 40px 0 0 56px;
+}
+
+div.contact_info span
+{
+    color: #163f77;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+div.contact_info span.email
+{
+    margin-bottom: 40px;
+}
+
+div.contact_info span.form_title
+{
+    color: #4c3c3f;
+    font-size: 14px;
+}
+
+form.info_form
+{
+    margin-top: 40px;
+    
+}
+
+form.info_form label
+{
+   color: #4c3c3f;
+   margin-top: 40px;
+   display: block;
+   font-size: 14px;
+   font-weight: bold;
+}
+
+form.info_form label,
+form.info_form input,
+form.info_form textarea
+{
+    display: block;
+}
+
+form.info_form input[type="submit"]
+{
+    margin-top: 40px;
+}
