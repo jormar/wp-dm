@@ -616,6 +616,7 @@ div.green_border
     background-image: url('images/nubetweets.png');
     background-repeat: no-repeat;
     margin-bottom: 10px;
+    overflow: hidden;
 }
 
 .last_tweet_container .item {

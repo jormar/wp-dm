@@ -1,5 +1,78 @@
 <?php
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Plugins adicionales
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/**
+ * Optional: set 'ot_show_pages' filter to false.
+ * This will hide the settings & documentation pages.
+ */
+add_filter( 'ot_show_pages', '__return_false' );
+
+/**
+ * Optional: set 'ot_show_new_layout' filter to false.
+ * This will hide the "New Layout" section on the Theme Options page.
+ */
+add_filter( 'ot_show_new_layout', '__return_false' );
+
+/**
+ * Required: set 'ot_theme_mode' filter to true.
+ */
+add_filter( 'ot_theme_mode', '__return_true' );
+
+/**
+ * Required: include OptionTree.
+ */
+require_once ( get_template_directory() . '/option-tree/ot-loader.php');
+
+/*
+ * El siguiente plugin crea atributos personalizados para las categorias.
+ * 
+ * Se usa para poder configurar los colores que se muestran por categoria en la
+ * plantilla.
+ */
+require_once ( get_template_directory() . '/includes/Tax-Meta-Class-master/Tax-meta-class/Tax-meta-class.php');
+if (is_admin()){
+    /* 
+     * prefix of meta keys, optional
+     */
+    $prefix = 'dmwp_';
+    /* 
+     * configure your meta box
+     */
+    $config = array(
+        'id' => 'demo_meta_box',          // meta box id, unique per meta box
+        'title' => 'Demo Meta Box',          // meta box title
+        'pages' => array('category'),        // taxonomy name, accept categories, post_tag and custom taxonomies
+        'context' => 'normal',            // where the meta box appear: normal (default), advanced, side; optional
+        'fields' => array(),            // list of meta fields (can be added by field arrays)
+        'local_images' => false,          // Use local or hosted images (meta box images for add/remove)
+        'use_with_theme' => get_template_directory_uri() . '/includes/Tax-Meta-Class-master/Tax-meta-class/'          //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
+    );
+
+    /*
+     * Initiate your meta box
+     */
+    $my_meta =  new Tax_Meta_Class($config);
+
+    /*
+     * Add fields to your meta box
+     */
+    //Color field
+    $my_meta->addColor($prefix.'color_field_id',array('name'=> __('Color en los t&iacute;tulos','tax-meta')));
+
+    /*
+     * Don't Forget to Close up the meta box decleration
+     */
+    //Finish Meta Box Decleration
+    $my_meta->Finish();
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Configuraciones del tema
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 if (function_exists('ot_get_option')) {
     define('FACEBOOK_URL', ot_get_option('facebook_url'));
     define('TWITTER_URL', ot_get_option('twitter_url'));
@@ -297,74 +370,4 @@ function getTwittsSuenotips($n=10)
     }
 
     return $result;
-}
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Plugins adicionales
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-/**
- * Optional: set 'ot_show_pages' filter to false.
- * This will hide the settings & documentation pages.
- */
-add_filter( 'ot_show_pages', '__return_false' );
-
-/**
- * Optional: set 'ot_show_new_layout' filter to false.
- * This will hide the "New Layout" section on the Theme Options page.
- */
-add_filter( 'ot_show_new_layout', '__return_false' );
-
-/**
- * Required: set 'ot_theme_mode' filter to true.
- */
-add_filter( 'ot_theme_mode', '__return_true' );
-
-/**
- * Required: include OptionTree.
- */
-require_once ( get_template_directory() . '/option-tree/ot-loader.php');
-
-/*
- * El siguiente plugin crea atributos personalizados para las categorias.
- * 
- * Se usa para poder configurar los colores que se muestran por categoria en la
- * plantilla.
- */
-require_once ( get_template_directory() . '/includes/Tax-Meta-Class-master/Tax-meta-class/Tax-meta-class.php');
-if (is_admin()){
-    /* 
-     * prefix of meta keys, optional
-     */
-    $prefix = 'dmwp_';
-    /* 
-     * configure your meta box
-     */
-    $config = array(
-        'id' => 'demo_meta_box',          // meta box id, unique per meta box
-        'title' => 'Demo Meta Box',          // meta box title
-        'pages' => array('category'),        // taxonomy name, accept categories, post_tag and custom taxonomies
-        'context' => 'normal',            // where the meta box appear: normal (default), advanced, side; optional
-        'fields' => array(),            // list of meta fields (can be added by field arrays)
-        'local_images' => false,          // Use local or hosted images (meta box images for add/remove)
-        'use_with_theme' => get_template_directory_uri() . '/includes/Tax-Meta-Class-master/Tax-meta-class/'          //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
-    );
-
-    /*
-     * Initiate your meta box
-     */
-    $my_meta =  new Tax_Meta_Class($config);
-
-    /*
-     * Add fields to your meta box
-     */
-    //Color field
-    $my_meta->addColor($prefix.'color_field_id',array('name'=> __('Color en los t&iacute;tulos','tax-meta')));
-
-    /*
-     * Don't Forget to Close up the meta box decleration
-     */
-    //Finish Meta Box Decleration
-    $my_meta->Finish();
 }
