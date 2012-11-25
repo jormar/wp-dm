@@ -31,6 +31,9 @@
             </div>
             
         </header>
+        <!-- ################ -->
+        
+        
         <div class ="content">
             <!--<div class ="white_cloud_container">
                 
@@ -43,20 +46,18 @@
                     </div>
                     <div id = "cycle_image">
                         <div id = "slideshow">
-                            <img alt="imag1" src = "images/lorem1.jpg" id= "pics1"/>
-                            <img alt="imag2" src = "images/lorem2.jpg" id= "pics2"/>
-                            <img alt="imag3" src = "images/lorem3.jpg" id= "pics3"/>
-                            <img alt="imag4" src = "images/lorem4.jpg" id= "pics4"/>
-                            <img alt="imag5" src = "images/lorem5.jpg" id= "pics5"/>
-                        </div>
-                    </div>
-                    <p class ="cycle_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+                            <?php for($i=1; $i<6; $i++) { ?>
+                            <div>
+                                <img alt="imag<?php echo $i ?>" src = "images/lorem<?php echo $i ?>.jpg" id= "pics<?php echo $i ?>"/>
+                                <p class ="cycle_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                        consequat.cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    <div id = "cycle_circle">
-
+                            </div>
+                            <?php } ?>
+                        </div>
                     </div>
+                    <div id = "cycle_circle"></div>
                 </div>
                 
                 <div class ="recent_news">
@@ -152,9 +153,10 @@
                     <?php }?>
                 </div>
             </aside>
-            <div class ="clear">
-                
-            </div>
+            <div class ="clear"></div>
+            
+            
+            <!-- ################ -->
             <footer class ="page_footer">
                 <img src ="../images/nubes-inferior-mapa-de-sitio.png" alt="footer image"/>
                 <div class="footer_info_container">
