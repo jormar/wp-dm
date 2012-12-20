@@ -425,7 +425,7 @@ div.content img.background_cloud
 .cycle_title 
 {
     color: white;
-    font-size: 18px;
+    font-size: 21px;
     font-weight: bold;
     height: 64px;
     line-height: 64px;
@@ -483,6 +483,7 @@ div.recent_news
 .main_content_new div.main_new_title h1.main_new_title a {
     color: #1e3d59;
     text-decoration: none;
+    font-size: 21px;
 }
 
 .main_content_new img
@@ -500,14 +501,15 @@ div.recent_news
     text-align: justify;
     width: 90%;
     margin: 0 5% 0 5%;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px;
 }
 
 .main_content_new .vermas
 {
     color: #214275;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 12px;
     text-decoration: none;
     right: 10px;
     position: absolute;
@@ -526,31 +528,31 @@ div.next_btn_container
 div.next_btn_container .der a
 {
     float: right;
-    font-size: 16px;
+    font-size: 22px;
     text-decoration: none;
-    color: #1e406d;
+    color: #1E406D;
     font-weight: bold;
     height: 55px;
     line-height: 55px;
-    padding-right: 60px;
+    padding-right: 50px;
     background-image: url('images/flecha-azul-der.png');
     background-repeat: no-repeat;
-    background-position: 115px;
+    background-position: 148px;
 }
 
 div.next_btn_container .izq a
 {
     float: left;
-    font-size: 16px;
+    font-size: 22px;
     text-decoration: none;
-    color: #1e406d;
+    color: #1E406D;
     font-weight: bold;
     height: 55px;
     line-height: 55px;
-    padding-left: 60px;
+    padding-left: 50px;
     background-image: url('images/flecha-azul-izq.png');
     background-repeat: no-repeat;
-    background-position: 25px;
+    background-position: 14px;
 }
 
 div.next_btn_container a {
@@ -702,7 +704,7 @@ aside div.news div.aside_new div.new_content p
     color: white;
     text-align: justify;
     line-height: 18px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 aside div.news div.aside_new a.keep_reading
@@ -711,7 +713,7 @@ aside div.news div.aside_new a.keep_reading
     float: left;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 12px;
     margin-top: 10px;
 }
 
@@ -763,6 +765,7 @@ footer.page_footer div.diarius_container
     background-color: #85c3dc;
     text-align: center;
     width: 100%;
+    font-size: 14px;
 }
 footer.page_footer div.diarius_container img
 {

@@ -2,11 +2,10 @@
 
 <div class ="main_container">
     <div class="article 404">
-        <div class ="cycle_title_container dark_blue">
-            <h1 class ="cycle_title">La p&aacute;gina que busca no est&aacute; disponible!</h1>
-        </div>
+        
         <div class="post-content article_text text">
-            <p>La p&aacute;gina a la que intenta acceder no existe. Si lo desea, puede usar nuestro buscador (ubicado en la parte superior) para encontrar la informaci&oacute;n que necesita.</p>
+            <img src="<?php echo get_template_directory_uri() ?>/images/404ERROR.jpg" />
+<!--            <p>La p&aacute;gina a la que intenta acceder no existe. Si lo desea, puede usar nuestro buscador (ubicado en la parte superior) para encontrar la informaci&oacute;n que necesita.</p>-->
         </div>
     </div>
 </div>
