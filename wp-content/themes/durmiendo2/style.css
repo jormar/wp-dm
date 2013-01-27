@@ -195,7 +195,7 @@ header
     height: 334px;
     width: 100%;
     background-color: white;
-    background: url('http://durmiendomejor.loc/sistema/wp-content/themes/durmiendo2/images/fondo-nubes-img.jpg') no-repeat 0 135px;
+    background: url('images/fondo-nubes-img2.jpg') no-repeat 0 -25px;
 }
 
 /* Estilos para el Home
@@ -238,14 +238,15 @@ header
 
 .navigation_list_container ul
 {
-    width: 740px;    
+    overflow: hidden;
+    float: left;
 }
 
 .navigation_list_container ul li
 {
     float: left;
-    margin: 0 0 0 44px;
-    font-size: 14px;
+    margin: 0 0 0 34px;
+    font-size: 16px;
     text-transform: uppercase;
 }
 
@@ -348,7 +349,7 @@ div.content img.background_cloud
     background-image: url('images/nube-post-principal.png');
     position: relative;
     z-index: 50;
-    
+    overflow: hidden;
 }
 
 #top_scroller .cycle_img,
@@ -361,7 +362,7 @@ div.content img.background_cloud
 #top_scroller .cycle_text
 {
     color: white;
-    text-align: justify; 
+    text-align: left;
     font-size: 15px;
     width: 650px;
     margin: 0 auto;
@@ -369,11 +370,20 @@ div.content img.background_cloud
     line-height: 20px;
     font-weight: bold;
 }
+#top_scroller .vermas {
+    position: absolute;
+    bottom: -18px;
+    left: 16px;
+    color: #214275;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
 
 #slideshow
 {
     margin: 0 auto;
-    overflow: hidden;
+    
     height: 424px;
     width: 682px;
 }
@@ -449,7 +459,7 @@ div.recent_news
 .main_content_new
 {
     width: 332px;
-    min-height: 314px;
+    min-height: 348px;
     background-color: white;
     float: left;
     margin-left: 22px;
@@ -466,50 +476,55 @@ div.recent_news
     z-index: 10;
 }
 
-.main_content_new div.main_new_title h1.main_new_title
+.main_content_new div.main_new_title h1.main_new_title,
+h2.main_new_title
 {
-    color: #1e3d59;
+    color: #073559;
     font-weight: bold;
-    line-height: 25px;
+    line-height: 22px;
     padding: 12px 10px;
 /*    text-transform: uppercase;*/
 }
 
 .main_content_new .entry-excerpt {
-    top: 225px;
-    position: absolute;
+/*    top: 225px;
+    position: absolute;*/
 }
 
-.main_content_new div.main_new_title h1.main_new_title a {
-    color: #1e3d59;
+.main_content_new div.main_new_title h1.main_new_title a,
+h2.main_new_title a
+{
+    color: #073559;
     text-decoration: none;
-    font-size: 21px;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 .main_content_new img
 {
     width: 100%;
     height: 168px;
+    margin-top: 18px;
 /*   margin-top: -52px;*/
-    top: 49px;
-    position: absolute;
+/*    top: 49px;
+    position: absolute;*/
 }
 
 .main_content_new p
 {
-    color: #214275;
-    text-align: justify;
+    color: #144266;
+    text-align: left;
     width: 90%;
     margin: 0 5% 0 5%;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 18px;
 }
 
 .main_content_new .vermas
 {
     color: #214275;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
     right: 10px;
     position: absolute;
@@ -518,46 +533,63 @@ div.recent_news
 
 div.next_btn_container
 {
-    width:684px;
-    height: 55px;
+    width: 684px;
+    height: 52px;
     float: left;
     margin-left: 24px;
-    margin-top: 41px;
+    margin-top: 4px;
 }
 
 div.next_btn_container .der a
 {
     float: right;
-    font-size: 22px;
+    font-size: 18px;
     text-decoration: none;
     color: #1E406D;
     font-weight: bold;
-    height: 55px;
-    line-height: 55px;
-    padding-right: 50px;
+    height: 52px;
+    line-height: 53px;
+    padding-right: 42px;
     background-image: url('images/flecha-azul-der.png');
     background-repeat: no-repeat;
-    background-position: 148px;
+    background-position: 122px;
 }
 
 div.next_btn_container .izq a
 {
     float: left;
-    font-size: 22px;
+    font-size: 18px;
     text-decoration: none;
     color: #1E406D;
     font-weight: bold;
-    height: 55px;
-    line-height: 55px;
-    padding-left: 50px;
+    height: 53px;
+    line-height: 53px;
+    padding-left: 38px;
     background-image: url('images/flecha-azul-izq.png');
     background-repeat: no-repeat;
-    background-position: 14px;
+    background-position: 7px;
 }
 
 div.next_btn_container a {
     text-decoration: none;
     color: #1e406d;
+}
+
+.next_btn_container_news {
+    text-align: right;
+    padding-right: 13px;
+    height: 42px;
+}
+.next_btn_container_news a {
+    text-align: right;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    height: 52px;
+    line-height: 42px;
+    padding-right: 30px;
+    background: url('images/flecha-blanca.png') no-repeat right -1px;
 }
 
 .pico_container
@@ -640,13 +672,15 @@ aside div.news
     background-color: #173d6c;
     margin-top: 10px;
     text-align: center;
-    padding-bottom: 22px;
+    border-radius: 20px;
 }
 
 aside div.news .aside_title
 {
     color: white;
     padding-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 aside div.news .aside_title a
@@ -661,6 +695,7 @@ aside div.news div.aside_new
     margin-top: 15px;
 /*    min-height: 308px;*/
     padding-bottom: 35px;
+    position: relative;
 }
 
 aside div.news div.aside_new div.aside_new_title
@@ -669,15 +704,20 @@ aside div.news div.aside_new div.aside_new_title
     text-align: center;
 }
 
-aside div.news div.aside_new div.aside_new_title h1
+aside div.news div.aside_new div.aside_new_title h1,
+aside div.news div.aside_new h2
 {
     color: white;
-    line-height: 25px;
-    padding: 12px 10px;
+    line-height: 22px;
+    padding: 9px 14px;
     text-transform: uppercase;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-aside div.news div.aside_new div.aside_new_title h1 a
+aside div.news div.aside_new div.aside_new_title h1 a,
+aside div.news div.aside_new h2 a
 {
     color: white;
     text-decoration: none;
@@ -702,19 +742,21 @@ aside div.news div.aside_new div.new_content
 aside div.news div.aside_new div.new_content p
 {
     color: white;
-    text-align: justify;
+    text-align: left;
     line-height: 18px;
     font-size: 14px;
+    padding: 0 14px;
 }
 
 aside div.news div.aside_new a.keep_reading
 {
-    color: #8fbfe5;
-    float: left;
-    text-decoration: none;
+    color: #214275;
     font-weight: bold;
-    font-size: 12px;
-    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    left: 14px;
+    position: absolute;
+    bottom: 10px;
 }
 
 /* Estilos para el footer

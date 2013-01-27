@@ -16,7 +16,7 @@
 
                     global $my_excerpt_length;
                     $temp=$my_excerpt_length;
-                    $my_excerpt_length=50;
+                    $my_excerpt_length=45;
 
                     while ( $wp_main_posts->have_posts() ) : $wp_main_posts->the_post();
                         $main_posts_ids[] = get_the_ID();
@@ -37,6 +37,7 @@
                         </a>
 
                         <div class="cycle_text"><?php the_excerpt() ?></div>
+                        <a class="vermas" href="<?php the_permalink() ?>">Seguir leyendo...</a>
                     </article>
                     <?php
                         endwhile;

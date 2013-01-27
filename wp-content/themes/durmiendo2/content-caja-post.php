@@ -5,11 +5,11 @@
         $color = get_tax_meta($cats[0],'dmwp_color_field_id');
     }
 ?>
-<article id="post-<?php the_ID(); ?>" class="main_content_new <?php echo join( ' ', get_post_class() ) ?>">
-    <div class ="main_new_title green" style="<?php if ( !empty($color) ) echo "background-color:" . $color; ?>">
+<article id="post-<?php the_ID(); ?>" class="main_content_new green <?php echo join( ' ', get_post_class() ) ?>" style="<?php if ( !empty($color) ) echo "background-color:" . $color; ?>">
+<!--    <div class ="main_new_title green" style="<?php if ( !empty($color) ) echo "background-color:" . $color; ?>">
         <h1 class ="main_new_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
-    </div>
-    <div class ="pico_container green_border" style="<?php if ( !empty($color) ) echo "border-top-color:" . $color; ?>"></div>
+    </div>-->
+<!--    <div class ="pico_container green_border" style="<?php if ( !empty($color) ) echo "border-top-color:" . $color; ?>"></div>-->
 
     <a href="<?php the_permalink() ?>">
         <?php
@@ -23,6 +23,8 @@
         }
         ?>
     </a>
+    
+    <h2 class ="main_new_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?> <?php echo $color ?></a></h2>
 
     <div class="entry-excerpt"><?php the_excerpt() ?></div>
     <a class="vermas" href="<?php the_permalink() ?>">Seguir leyendo...</a>

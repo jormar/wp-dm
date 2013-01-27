@@ -10,7 +10,7 @@
                 </div>
                 <div class ="diarius_container">
                     <div class ="logo_link_container"> 
-                        <a href ="http://www.themediarus.com/">
+                        <a href ="http://www.themediarus.com/" target="_blank">
                             DISENADO Y MANTENIDO POR: <img src ="<?php echo get_template_directory_uri(); ?>/images/logothemediarus.png" alt ="images de la empresa" />
                         </a>
                     </div>
