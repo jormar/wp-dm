@@ -1,6 +1,6 @@
             <div class="clear"></div>
             <footer class ="page_footer">
-                <img src ="<?php echo get_template_directory_uri(); ?>/images/nubes-inferior-mapa-de-sitio.png" alt="footer image"/>
+<!--                <img src ="<?php echo get_template_directory_uri(); ?>/images/nubes-inferior-mapa-de-sitio.png" alt="footer image"/>-->
 
                 <div class="footer_info_container">
                     <?php wp_nav_menu( array( 'theme_location' => 'footer1-menu' ) ); ?>

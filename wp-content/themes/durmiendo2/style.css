@@ -344,9 +344,9 @@ div.content img.background_cloud
 {
     float: left;
     width: 682px;
-    height: 483px;
+    height: 486px;
     margin-left: 24px;
-    background-image: url('images/nube-post-principal.png');
+    background: url('images/nube-principal.png') no-repeat;
     position: relative;
     z-index: 50;
     overflow: hidden;
@@ -767,6 +767,8 @@ footer.page_footer
     /*height: 342px;*/
     margin-top: -26px;
     float: left;
+    background: url('images/nube-inferior.png') no-repeat 0px 40px;
+    padding-top: 90px;
 }
 
 footer.page_footer img
