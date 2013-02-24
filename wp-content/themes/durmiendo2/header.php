@@ -83,7 +83,7 @@
                 <div class ="social_network_container">
                     <a href="<?php echo FACEBOOK_URL ?>" target="_blank"><img src ="<?php echo get_template_directory_uri(); ?>/images/facebook.png" alt ="Facebook"/></a>
                     <a href="<?php echo TWITTER_URL ?>" target="_blank"><img src ="<?php echo get_template_directory_uri(); ?>/images/twitter.png" alt ="Twitter"/></a>
-                    <a href="<?php echo get_page_link(get_page_by_title("contacto")->ID) ?>"><img src ="<?php echo get_template_directory_uri(); ?>/images/mail.png" alt ="Enviar correo"/></a>
+<!--                    <a href="<?php echo get_page_link(get_page_by_title("contacto")->ID) ?>"><img src ="<?php echo get_template_directory_uri(); ?>/images/mail.png" alt ="Enviar correo"/></a>-->
                 </div>
             </div>
 

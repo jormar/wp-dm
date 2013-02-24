@@ -54,7 +54,7 @@
                     .cycle({ 
                     fx:     'turnDown', 
                     speed:  'fast', 
-                    timeout: 3000, 
+                    timeout: 8000, 
                     pager:  '#nav',
                             pause:   1  
                 });

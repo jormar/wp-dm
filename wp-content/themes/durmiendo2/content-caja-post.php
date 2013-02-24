@@ -25,7 +25,7 @@
     </a>
     
     <h2 class ="main_new_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-
+    <span class="date_post"><?php the_date() ?></span>
     <div class="entry-excerpt"><?php the_excerpt() ?></div>
     <a class="vermas" href="<?php the_permalink() ?>">Seguir leyendo...</a>
 </article>
